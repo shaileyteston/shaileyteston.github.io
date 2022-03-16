@@ -2,27 +2,108 @@
 <html>
     <head>
         <title>Shailey Testons website</title>
+        <style>
+            body {
+                background: LightGray;
+                color: rgb(45, 45, 45);
+                padding: 10px;
+                font-family: arial;
+            }
+            #all-contents {
+              max-width: 800px;
+                margin: auto;
+            }
+         
+            /* navigation menu */
+            nav {
+                background: #E6E6FA;
+               margin: 0 auto;
+               margin-bottom: 20px;
+                display: flex;
+                padding: 10px;
+            }
+            h1 {
+                display: flex;
+                align-items: center;
+                color: #FFFACD;
+                flex: 1;
+                margin: 0;
+            }
+            #nav-ul {
+                list-style-image: none;
+            }
+            .nav-li {
+                display: inline-block;
+                padding: 0 10px;
+            }
+            a {
+                text-decoration: none;
+                color: rgb(156, 154, 154);
+            }
+         
+            /* main container area beneath menu */
+            main {
+                background: #FFFACD;
+                display: flex;
+            }
+            .sidebar {
+                margin-right: 25px;
+                padding: 10px;
+            }
+            .sidebar-img {
+                width: 200px;
+            }
+            .content {
+                flex: 1;
+                padding: 15px;
+            }
+            #interests {
+                border: 4px silver ridge;
+                padding: 8px;
+            }
+            h2, h3 {
+                margin: 0px;
+            }
+         </style>
     </head>
     
     <body>
-    
-        <div>
+        <!-- All Content Goes Here -->
+        <div id="all-contents">
             <nav>
-
+                <h1>About Me Website</h1>
+                <ul id="nav-ul">
+                    <li class="nav-li">
+                        <a href="index.html"> Home </a>
+                    </li>
+                    <li class="nav-li">
+                        <a href="portfolio.html"> Portfolio </a>
+                    </li>
+                </ul>
             </nav>
 
             <main>
                 <!-- Sidebar section -->
-                <div>
-
+                <div class="sidebar">
+                    <img class="sidebar-img"src="https://lh3.googleusercontent.com/JtVLSJ-qPIYGjc7mRQDfEWnXoOitqJNBkVYYhXhr6_ciCGT9QCToWMzgr0BPOUD0hgo_Hpa8DuKcYru2hqNxWHuM9tINDnEbdi0BvpmywiiGoMFOvcyFx5iXxJNwfI3W4sjKU1l-YeuAO0go-kY1RnQ0Y3CZkl-ZGkS5AGyOk3uHRbPAwffEEq8vl6SQ-L4XnVqzlAhm6UM1CBuQ2s5JVfi0LgjVtfvjA_j5OAvlSdEO74bqxib_yqMcEQIAXQWWZNU0S96HQ9FkSPliD3kSY_WNypzfkOTSjBl0XpSslmzLaRrrKtoThNXIMaR7gKlOPSCY_47k7vgEa1DAolkl3pl3jCS1MUvWHpihWjE0Rt6M5tq0So7-llum9V6x44Ly8khIpVp0MtR4QJg_frnrlpQJEKI7WPOm5oDV-gTw81uhd1TVG2wAqM_6Z3cEtXN33BLyqIv-XdRue8KCiTBn7TF02IrXGlnPlYEGsJZgOcJ6-628QibQBQErRLLVPTlKpOvKlhkuIZ96XwIQZCPyGGWNbekkPN1o7-XDuvO-2NdzKwV-k_xRGNzGo7jaY3DPyGNmHRIgU_Tecl3WLWODTlsjxk0VmvQSYy-5fbCbhydvrq5WNjrpEGFfyd1GQDVNGnPDtXL1s3a5wfPp1UDwOyWNXTq2F8A9MF8eAnhXojD0TTR13zqgEcVps3CUTVPT1aMt8Z0gFU8AGvEgqhTF2LyA=w458-h625-no?authuser=0">
                 </div>
 
                 <!-- Content section -->
-                <div>
-                    
+                <div class="content">
+                    <h2>Shailey Teston</h2>
+                    <p>Sophmore at Walker High</p>
+                    <!-- Interests section -->
+                    <div id="interests">
+                        <h3>Interests</h3>
+                        <ul>
+                            <li>Reading</li>
+                            <li>Running</li>
+                            <li>Watching t.v</li>
+                        </ul>
+                    </div>
                 </div>
             </main>
             
-            </div>
+        </div>
     </body>
 </html>
