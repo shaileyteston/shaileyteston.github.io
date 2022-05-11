@@ -20,13 +20,26 @@ var init = function (window) {
         ////////////////////////////////////////////////////////////
         
         // TODO 1 : Declare and initialize our variables
-
+            var circle;
+            var circles = [];
 
         // TODO 2 : Create a function that draws a circle 
-        
+        function drawCircle(){
+             // Code to draw a circle
+            circle = draw.randomCircleInArea(canvas, true, true, '#999', 2);
+            physikz.addRandomVelocity(circle, canvas, 10, 10);
+            view.addChild(circle);
+            circles.push(circle);
 
-        // TODO 3 / 8 : Call the drawCircle() function 
+        }
 
+
+        // TODO 3 / 7 : Call the drawCircle() function 
+        drawCircle();
+        drawCircle();
+        drawCircle();
+        drawCircle();
+        drawCircle();
 
         ////////////////////////////////////////////////////////////
         ///////////////// PROGRAM LOGIC ////////////////////////////
@@ -39,7 +52,11 @@ var init = function (window) {
         */
         function update() {
             // TODO 4 : Update the circle's position //
-
+            physikz.updatePosition(circlesArray[0]);
+            physikz.updatePosition(circlesArray[1]);
+            physikz.updatePosition(circlesArray[2]);
+            physikz.updatePosition(circlesArray[3]);
+            physikz.updatePosition(circlesArray[4]);
             
             // TODO 5 / 10 : Call game.checkCirclePosition() on your circles.
            
@@ -59,6 +76,8 @@ var init = function (window) {
             // if the circle has gone past the RIGHT side of the screen then place it on the LEFT
             if ( circle.x > canvas.width ) {
                 circle.x = 0;
+            if (circle.x < canvas.width)
+                circle.x = 
             }
             
             // TODO 7 : YOUR CODE STARTS HERE //////////////////////
