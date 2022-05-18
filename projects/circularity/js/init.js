@@ -40,7 +40,10 @@ var init = function (window) {
         drawCircle();
         drawCircle();
         drawCircle();
-
+        //TODO 7: your code starts here //////////
+        for (var loopsCompleted = 0; loopsCompleted < 100; loopsCompleted++) {
+            drawCircle()
+        }
         ////////////////////////////////////////////////////////////
         ///////////////// PROGRAM LOGIC ////////////////////////////
         ////////////////////////////////////////////////////////////
@@ -52,18 +55,13 @@ var init = function (window) {
         */
         function update() {
             // TODO 4 : Update the circle's position //
-            physikz.updatePosition(circlesArray[0]);
-            physikz.updatePosition(circlesArray[1]);
-            physikz.updatePosition(circlesArray[2]);
-            physikz.updatePosition(circlesArray[3]);
-            physikz.updatePosition(circlesArray[4]);
+           for(var i = 0 ; i < circles.length; i++) {
+               physikz.updatePosition( circles[i]);
+               game.checkCirclePosition( circles[i]);
+           }
             
             // TODO 5 / 10 : Call game.checkCirclePosition() on your circles.
-            game.checkCirclePosition(circlesArray[0]);
-            game.checkCirclePosition(circlesArray[1]);
-            game.checkCirclePosition(circlesArray[2]);
-            game.checkCirclePosition(circlesArray[3]);
-            game.checkCirclePosition(circlesArray[4]);
+           
             // TODO 9 : Iterate over the array
            
             
@@ -80,8 +78,15 @@ var init = function (window) {
             if ( circle.x > canvas.width ) {
                 circle.x = 0;
             }
-            if (circle.x < canvas.width) {
-                circle.x 
+            if (circle.x < 0) {
+                circle.x = canvas.width
+            }
+
+            if ( circle.y > canvas.height){
+                circle.y = 0
+            }
+            if (circle.y < 0){
+                circle.y = canvas.height
             }
             
 
